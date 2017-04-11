@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="carousel.js"></script>
+		<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+.carousel {
+	width: 1024px;
+	height: 420px;
+	margin: 100px auto;
+	position: relative;
+}
+.carousel .Con{
+	width: 1024px;
+	height: 420px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.carousel .Con .scroll {
+	width: 9999px;
+	height: 420px;
+	position: absolute;
+	left: 0;
+}
+.carousel .Con .scroll img{
+	float: left;
+}
+.carousel .Con .But {
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+.carousel .Con .But li {
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	border: 1px solid #666;
+	border-radius: 50%;
+	/*background: url(./pic/dot1.jpg);*/
+}
+.carousel .Con .But li.active {
+	background: #999;
+}
+a.next, a.prev {
+	display: block;
+	color: #666;
+	text-decoration: none;
+	opacity: 0.5;
+	font-size: 40px;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 190px;
+}
+a.next {
+	background: url();
+	right: -60px;
+}
+a.prev {
+	background: url();
+	left: -50px;
+}
+a.prev:hover {
+	background: url();
+	left: -35px;
+}
+a.next:hover {
+	background: url();
+	right: -45px;
+}
+	</style>
+</head>
+<body>
+	<div class="carousel">
+		<div class="Con">
+		<!-- 轮播(carousel)项目 -->
+			<div class="scroll">
+				<img src="./pic/1.jpg">
+				<img src="./pic/2.jpg">
+				<img src="./pic/3.jpg">
+				<img src="./pic/4.jpg">
+				<img src="./pic/5.jpg">
+				<img src="./pic/6.jpg">
+				<img src="./pic/7.jpg">				
+			</div>
+
+			<!-- 轮播(carousel)指标 -->
+			<ol class="But">
+				<li class="active"></li>  <!-- 0 * img.width -->
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+
+		<!-- 轮播(carousel)导航 -->
+		<a href="javascript:void(0)" class="prev" data-slide="prev"><<</a>
+		<a href="javascript:void(0)" class="next" data-slide="next">>></a>
+	</div>
+
+	<script type="text/javascript">
+		$(".carousel").carousel({
+/*			Automatic : false,*/
+			Data : 500	
+		});
+	</script>
+</body>
+</html>
